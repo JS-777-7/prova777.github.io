@@ -22,22 +22,6 @@
   <h1>Valore da Google Sheets (B2)</h1>
   <div class="contenuto" id="b2">Caricamento...</div>
 
-  <script>
-    const sheetId = '1K3Ur3l2HiAX5BJFmv_lsiszytdMWmqPbQFwy_4QhqRU'; // <-- sostituisci con il tuo ID
-    const apiKey = 'AIzaSyDdQ6HlXYIgqpLUDNLKqVFOFYlM2Y3suNs';   // <-- sostituisci con la tua chiave
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/A1?key=${apiKey}`;
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const valore = data.values[0][0];
-        document.getElementById('b2').innerText = valore;
-      })
-      .catch(error => {
-        console.error('Errore nel caricamento:', error);
-        document.getElementById('b2').innerText = "Errore nel caricamento";
-      });
-  </script>
 
 </body>
 </html>
