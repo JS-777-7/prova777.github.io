@@ -2,12 +2,42 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Pagina Riservata</title>
+  <title>Leggi da Google Sheets</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .contenuto {
+      font-size: 1.5rem;
+      color: #333;
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Benvenuto!</h1>
-  <p>Questo sito non è visibile nei motori di ricerca.</p>
+
+  <h1>Valore da Google Sheets (A1)</h1>
+  <div class="contenuto" id="a1">Caricamento...</div>
+
+  <script>
+    const sheetId = '1K3Ur3l2HiAX5BJFmv_lsiszytdMWmqPbQFwy_4QhqRU'; // <-- sostituisci con il tuo ID
+    const apiKey = 'AIzaSyDdQ6HlXYIgqpLUDNLKqVFOFYlM2Y3suNs';   // <-- sostituisci con la tua chiave
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/A1?key=${apiKey}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const valore = data.values[0][0];
+        document.getElementById('a1').innerText = valore;
+      })
+      .catch(error => {
+        console.error('Errore nel caricamento:', error);
+        document.getElementById('a1').innerText = "Errore nel caricamento";
+      });
+  </script>
+
 </body>
 </html>
