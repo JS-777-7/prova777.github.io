@@ -19,7 +19,7 @@
 .page-title{
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(90deg, #14b8a6, #6366f1);
+  background: linear-gradient(90deg, #1294df, #1c1ff2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
@@ -111,35 +111,37 @@ footer {
 .podio {
   display: flex;
   align-items: flex-end;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .posizione {
-  width: 100px;
-  text-align: center;
-  padding: 1rem;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px 8px 0 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+}
+
+.testo {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.colonna {
+  width: 100px;
+  border-radius: 8px 8px 0 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.primo {
+.primo .colonna {
   height: 200px;
   background: gold;
-  color: #000;
 }
 
-.secondo {
+.secondo .colonna {
   height: 150px;
   background: silver;
-  color: #000;
 }
 
-.terzo {
+.terzo .colonna {
   height: 120px;
-  background: #cd7f32; /* bronzo */
+  background: #cd7f32;
 }
