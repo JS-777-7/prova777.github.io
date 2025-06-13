@@ -14,3 +14,17 @@ function toggleleftmenu(){
         lista.classList.add("show");
     }
 }
+
+document.getElementById("toggle-left-menu").addEventListener("click", function(e) {
+  e.stopPropagation(); // <--- fondamentale
+  toggleleftmenu();
+});
+
+  document.addEventListener('click', (e) => {
+    if (!document.querySelector(".left-menu ul").contains(e.target)) {
+        document.querySelector(".left-menu ul").style.width = 0 + "px";
+        setTimeout(() => {
+      document.querySelector(".left-menu ul").classList.remove("show");
+    }, 300); 
+    }
+  });
