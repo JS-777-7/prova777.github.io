@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GGpt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<link rel="stylesheet" href="style.css" />
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GameSheet DLC</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class = "containter"></div>
-    <div class = "page-title"> GameSheet DLC</div>
-        <div class = "classifica">
-            <h1>Top 3 giochi di sempre</h1>
-            <div class="podio">
-                <div class="posizione secondo">
-                    <div class="testo">🥈<br>2° Posto<br><strong>Tricky Towers</strong></div>
-                    <div class="colonna"></div>
-                </div>
-                <div class="posizione primo">
-                    <div class="testo">🥇<br>1° Posto<br><strong>Zuppa</strong></div>
-                    <div class="colonna"></div>
-                </div>
-                <div class="posizione terzo">
-                    <div class="testo">🥉<br>3° Posto<br><strong>Phogs</strong></div>
-                    <div class="colonna"></div>
-                </div>
-                </div>
-        </div>
+  <body>
+    <div class="titolo-pagina">
+      <header>GameSheet</header>
     </div>
-</body>
 
+    <div class="top-navigation">
+      <div class="left-menu">
+        <button onclick="toggleleftmenu()" id="toggle-left-menu">
+          <i class="fas fa-bars my-icon"></i>
+        </button>
+        <ul>
+          <li>Gameplay</li>
+          <li>Narrativa</li>
+          <li>Grafica</li>
+          <li>Character Design</li>
+          <li>Level Desing</li>
+          <li>Sound Design</li>
+          <li>Performance e Accessibilità</li>
+          <li>Multiplayer</li>
+        </ul>
+      </div>
+    </div>
 
-
-
-
+    <script src="script.js"></script>
+  </body>
 </html>
