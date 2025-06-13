@@ -15,12 +15,12 @@ function toggleleftmenu(){
     }
 }
 
-document.getElementById("toggle-left-menu").addEventListener("click", function(e) {
+document.getElementById("toggle-left-menu").addEventListener("pointerdown", function(e) {
   e.stopPropagation(); // <--- fondamentale
   toggleleftmenu();
 });
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener('pointerdown', (e) => {
     if (!document.querySelector(".left-menu ul").contains(e.target)) {
         document.querySelector(".left-menu ul").style.width = 0 + "px";
         setTimeout(() => {
